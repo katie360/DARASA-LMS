@@ -43,3 +43,24 @@ mat-expansion-panel-header span {
 .sidenav {
     max-width: 400px;
 }
+
+.logout {
+    border: none;
+    color: white;
+    background-color: rgb(228, 165, 4);
+    padding: 13px 23px;
+    margin-left: 20px;
+    margin-top: 28px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.logout:hover {
+    background-color: white;
+    color: black;
+}

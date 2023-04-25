@@ -36,7 +36,8 @@ const routes: Routes = [
       { path: 'progress', component: ProgressComponent },
       { path: 'course-management', component: CourseManagementComponent },
       { path: 'settings', component: SettingsComponent },
-      {path:'courses',component:MyCoursesComponent}
+      {path:'courses',component:MyCoursesComponent},
+      {path:'resources',component:ResourcesComponent}
       // { path: '', redirectTo: 'profile', pathMatch: 'full' }
     ]
   },
