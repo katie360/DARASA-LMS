@@ -1,0 +1,45 @@
+mat-sidenav {
+    background-color: black;
+}
+
+.toolbar {
+    background-color: black;
+}
+
+.toolbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.panel {
+    background-color: #121213;
+}
+
+mat-icon {
+    font-size: 20px;
+    color: rgb(228, 165, 4);
+}
+
+mat-nav-list mat-icon {
+    margin-left: 22px;
+    margin-bottom: 17px;
+    margin-top: 17px;
+    margin-right: 17px;
+}
+
+.mat-list-item {
+    color: white!important;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+mat-expansion-panel-header span {
+    padding-top: 18px;
+}
+
+.sidenav {
+    max-width: 400px;
+}

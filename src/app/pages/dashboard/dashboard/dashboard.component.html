@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false" #sidenav mode="side">
+        <mat-toolbar class="toolbar">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+              </button>
+            <a href="">Darasa </a> </mat-toolbar>
+        <mat-nav-list class="items">
+            <a class="mat-list-item" routerLinkActive="active" routerLink="profile">
+                <mat-icon>person</mat-icon>Profile</a>
+            <a class="mat-list-item" routerLink="/dashboard/home" routerLinkActive="active">
+                <mat-icon>dashboard</mat-icon>dashboard</a>
+            <a class="mat-list-item" routerLink="courses" routerLinkActive="active">
+                <mat-icon>computer</mat-icon>My courses</a>
+            <a class="mat-list-item" routerLink="/dashboard/home" routerLinkActive="active">
+                <mat-icon>book</mat-icon>Resources</a>
+            <a class="mat-list-item" routerLink="/dashboard/home" routerLinkActive="active">
+                <mat-icon>quiz</mat-icon>Test and Quizzes</a>
+
+
+            <!-- <mat-expansion-panel class="panel">
+                <mat-expansion-panel-header>
+                    <mat-icon>library_books</mat-icon>
+                    <span style="color: white;">Courses</span>
+                </mat-expansion-panel-header>
+                <a class="mat-list-item" routerLink="/dashboard/course-management/courses">My courses</a>
+                <a class="mat-list-item" routerLink="/dashboard/course-management/students">Add new course</a>
+                <a class="mat-list-item" routerLink="/dashboard/course-management/assignments">Assignments</a>
+            </mat-expansion-panel> -->
+
+
+            <a class="mat-list-item" routerLink="/dashboard/progress" routerLinkActive="active">
+                <mat-icon>analytics</mat-icon>Progress</a>
+            <a class="mat-list-item" routerLink="/dashboard/settings" routerLinkActive="active">
+                <mat-icon>help</mat-icon>help</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

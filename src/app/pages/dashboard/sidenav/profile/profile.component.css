@@ -1,0 +1,25 @@
+.container {
+    background: linear-gradient(to right, #d58001 0%, #ffa600 100%);
+    padding: 30px;
+}
+
+.flex-lg-nowrap {
+    padding: 30px;
+}
+
+.btn {
+    background-color: #d58001;
+    border: none;
+}
+
+.final {
+    margin-right: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.nav li a {
+    font-weight: bold;
+}
