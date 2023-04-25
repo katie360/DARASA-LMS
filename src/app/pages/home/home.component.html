@@ -68,7 +68,7 @@
 
         <div class="categories-content">
             <div class="box" *ngFor="let category of categories">
-                <img src="assets/img/cate1.png">
+                <img src="{{ category.image }}">
                 <h3>{{ category.name }}</h3>
                 <p>{{ category.description }} </p>
             </div>
@@ -93,7 +93,7 @@
             <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" *ngFor="let course of courses">
                 <div class="events_item">
                     <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-01.jpg" alt=""></a>
+                        <a href="#"><img src="{{ course.image }}" alt=""></a>
 
                         <span class="price">
                             <h6><em>$</em>{{ course.price }}</h6>

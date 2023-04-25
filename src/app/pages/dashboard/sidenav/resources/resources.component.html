@@ -6,85 +6,19 @@
     <div class="container">
 
         <div class="row event_box">
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" *ngFor="let course of courses">
                 <div class="events_item">
                     <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-01.jpg" alt=""></a>
+                        <a href="#"><img src="{{ course.image }}" alt=""></a>
 
-                        <span class="price"><h6><em>$</em>0</h6></span>
+                        <span class="price"><h6><em>$</em>{{ course.price }}</h6></span>
                     </div>
                     <div class="down-content">
 
-                        <h4>Introduction to programming</h4>
+                        <h4>{{ course.name }}</h4>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-02.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Web development for beginners</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-03.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Javascript for beginners</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-04.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Online Learning Steps</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-05.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Git and Version Control</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-06.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Full Stack Developer</h4>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
