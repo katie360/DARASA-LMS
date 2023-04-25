@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   showingPopup = false;
+  categories: any;
 
   showPopup() {
     this.showingPopup = true;
@@ -25,4 +27,13 @@ export class HeaderComponent {
   noPopup() {
     this.flashPopup = false;
   }
+
+  constructor(private apiService: ApiService) { }
+
+  ngOnInit(): void {
+    this.apiService.Get('categories').subscribe((res: any) => {
+      this.categories = res;
+    });
+  }
+
 }

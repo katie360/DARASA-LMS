@@ -3,9 +3,9 @@
     <div class="hero" id="video-background">
 
         <video autoplay muted loop>
-      <source src="/assets/book-4952.mp4" type="video/mp4">
+            <source src="/assets/book-4952.mp4" type="video/mp4">
 
-    </video>
+        </video>
 
 
         <div class="home-text intro">
@@ -67,48 +67,11 @@
         </div>
 
         <div class="categories-content">
-            <div class="box">
+            <div class="box" *ngFor="let category of categories">
                 <img src="assets/img/cate1.png">
-                <h3>Front-End Web Development</h3>
-
-                <ul>
-                    <li>HTML and CSS</li>
-                    <li>JavaScript</li>
-                    <li>Front-End Web Development (React, Angular)</li>
-                    <li>Web Design</li>
-
-                </ul>
-
+                <h3>{{ category.name }}</h3>
+                <p>{{ category.description }} </p>
             </div>
-
-            <div class="box">
-                <img src="assets/img/cate2.png">
-                <h3>Back-End Web Development</h3>
-
-                <ul>
-                    <li>Server-Side Programming (Node.js, Python)</li>
-                    <li>Databases (MySQL)</li>
-                    <li>Full-Stack Web Development</li>
-
-                </ul>
-
-            </div>
-
-            <div class="box">
-                <img src="assets/img/cate3.png">
-                <h3>General Web Development Courses</h3>
-
-                <ul>
-                    <li>Web Development for Beginners</li>
-                    <li>Web Accessibility</li>
-
-
-                </ul>
-
-            </div>
-
-
-
         </div>
 
         <div class="main-btn">
@@ -127,81 +90,17 @@
     <div class="container">
 
         <div class="row event_box">
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" *ngFor="let course of courses">
                 <div class="events_item">
                     <div class="thumb">
                         <a href="#"><img src="/assets/img/images/course-01.jpg" alt=""></a>
 
-                        <span class="price"><h6><em>$</em>0</h6></span>
+                        <span class="price">
+                            <h6><em>$</em>{{ course.price }}</h6>
+                        </span>
                     </div>
                     <div class="down-content">
-
-                        <h4>Introduction to programming</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-02.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Web development for beginners</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-03.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Javascript for beginners</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-04.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Online Learning Steps</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-05.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Git and Version Control</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
-                <div class="events_item">
-                    <div class="thumb">
-                        <a href="#"><img src="/assets/img/images/course-06.jpg" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>0</h6></span>
-                    </div>
-                    <div class="down-content">
-
-                        <h4>Full Stack Developer</h4>
+                        <h4>{{ course.name }}</h4>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@
                     <h2>Upcoming Events</h2>
                 </div>
             </div>
-            <div class="col-lg-12 col-md-6">
+            <div class="col-lg-12 col-md-6" *ngFor="let course of courses">
                 <div class="item">
                     <div class="row">
                         <div class="col-lg-3">
@@ -18,149 +18,20 @@
                         <div class="col-lg-9">
                             <ul>
                                 <li>
-                                    <span class="category">Web Design</span>
-                                    <h4>HTML and CSS Fundamentals</h4>
+                                    <span class="category">{{ course.category_name }}</span>
+                                    <h4>{{ course.name }}</h4>
                                 </li>
                                 <li>
-                                    <span>Covering the basics of creating web pages and styling them with CSS.</span>
-
-                                </li>
-                                <li>
-                                    <span>Duration:</span>
-                                    <h6>22 Hours</h6>
-                                </li>
-                                <li>
-                                    <span>Price:</span>
-                                    <h6>$120</h6>
-                                </li>
-                            </ul>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-6">
-                <div class="item">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="image">
-                                <img src="/assets/img/images/event-02.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <ul>
-                                <li>
-                                    <span class="category">Front End</span>
-                                    <h4>Responsive Web Design</h4>
-                                </li>
-                                <li>
-                                    <span>Teaching techniques for creating web pages that adapt to different screen sizes and devices.</span>
-
+                                    <span>{{ course.description }}</span>
+            
                                 </li>
                                 <li>
                                     <span>Duration:</span>
-                                    <h6>30 Hours</h6>
+                                    <h6>{{ course.duration }}</h6>
                                 </li>
                                 <li>
                                     <span>Price:</span>
-                                    <h6>$320</h6>
-                                </li>
-                            </ul>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-6">
-                <div class="item">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="image">
-                                <img src="/assets/img/images/event-03.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <ul>
-                                <li>
-                                    <span class="category">Full Stack</span>
-                                    <h4>JavaScript and <br> JQuery</h4>
-                                </li>
-                                <li>
-                                    <span> Introducing the basics of programming with JavaScript. How to use the popular JavaScript library for DOM manipulation and event handling.</span>
-
-                                </li>
-                                <li>
-                                    <span>Duration:</span>
-                                    <h6>30 Hours</h6>
-                                </li>
-                                <li>
-                                    <span>Price:</span>
-                                    <h6>$320</h6>
-                                </li>
-                            </ul>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-6">
-                <div class="item">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="image">
-                                <img src="/assets/img/images/event-04.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <ul>
-                                <li>
-                                    <span class="category">Front End</span>
-                                    <h4>CSS Pre-processors</h4>
-                                </li>
-                                <li>
-                                    <span>Introducing students to popular CSS pre-processors in this case Sass .</span>
-
-                                </li>
-                                <li>
-                                    <span>Duration:</span>
-                                    <h6>30 Hours</h6>
-                                </li>
-                                <li>
-                                    <span>Price:</span>
-                                    <h6>$320</h6>
-                                </li>
-                            </ul>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12 col-md-6">
-                <div class="item">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="image">
-                                <img src="/assets/img/images/event-04.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <ul>
-                                <li>
-                                    <span class="category">Front-end</span>
-                                    <h4>Frameworks</h4>
-                                </li>
-                                <li>
-                                    <span>Covering popular front-end frameworks such as React and Angular</span>
-
-                                </li>
-                                <li>
-                                    <span>Duration:</span>
-                                    <h6>48 Hours</h6>
-                                </li>
-                                <li>
-                                    <span>Price:</span>
-                                    <h6>$440</h6>
+                                    <h6>${{ course.price }}</h6>
                                 </li>
                             </ul>
                             <a href="#"><i class="fa fa-angle-right"></i></a>

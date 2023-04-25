@@ -15,9 +15,10 @@
                     <li>
                         <a href="#">Courses <i class="bx bx-down-arrow-alt"></i></a>
                         <ul class="sub_menu">
-                            <li><a routerLink="frontend">Front-End Web Development</a></li>
-                            <li><a routerLink="backend">Back-End Web Development</a></li>
-                            <li><a href="#">General Web Development courses</a></li>
+                            <!-- loop through categories and display them here -->
+                            <li *ngFor="let category of categories">
+                                <a routerLink="{{ category.route }}">{{ category.name }}</a>
+                            </li>
 
                         </ul>
                     </li>
