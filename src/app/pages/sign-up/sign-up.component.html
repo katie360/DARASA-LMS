@@ -1,32 +1,27 @@
 <div class="wrapper">
     <div class="container">
-        <form action="#">
+        <form (submit)="signUp()">
             <div class="title">Sign up</div>
             <div class="input-box underline">
-                <input type="text" placeholder="Enter Your Full Name" required>
+                <input type="text" placeholder="Enter Your Full Name" required name="name" [(ngModel)]="name">
                 <div class="underline"></div>
             </div>
 
             <div class="input-box underline">
-                <input type="text" placeholder="Enter Your Email" required>
+                <input type="text" placeholder="Enter Your Email" required name="email" [(ngModel)]="email">
                 <div class="underline"></div>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Enter Your Password" required>
+                <input type="password" placeholder="Enter Your Password" required name="password1" [(ngModel)]="password1">
                 <div class="underline"></div>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Confirm Your Password" required>
+                <input type="password" placeholder="Confirm Your Password" required name="password2" [(ngModel)]="password2">
                 <div class="underline"></div>
             </div>
             <div class="input-box button">
                 <input type="submit" name="" value="Sign-up">
             </div>
         </form>
-        <div class="option">or Connect With Social Media</div>
-
-        <div class="facebook">
-            <a href="#"><i class="fab fa-google"></i>Sign in With Google</a>
-        </div>
     </div>
 </div>

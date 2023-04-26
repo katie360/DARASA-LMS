@@ -37,6 +37,7 @@ import { ResourcesComponent } from './pages/dashboard/sidenav/resources/resource
 import { TestsComponent } from './pages/dashboard/sidenav/tests/tests.component';
 import { AssistComponent } from './pages/dashboard/sidenav/assist/assist.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -84,7 +85,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatDatepickerModule,
     // MatMomentDateModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
