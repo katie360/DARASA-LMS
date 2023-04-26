@@ -8,7 +8,6 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class MyCoursesComponent {
   courses: any;
-
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
