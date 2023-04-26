@@ -10,11 +10,25 @@ export class ApiService {
 
   private url = "";
 
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    })
-  };
+  private getToken(): string | null {
+    return localStorage.getItem('token');
+  }
+
+  private getHttpOptions(): any {
+    const token = this.getToken();
+    if (token !== null) {
+      return {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Authorization': `Token ${token}`
+        })
+      };
+    } else {
+      return { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    }
+  }
+
+  private httpOptions = this.getHttpOptions();
 
   constructor(private httpClient: HttpClient) {
     this.url = environment.apiUrl;
@@ -27,9 +41,15 @@ export class ApiService {
       return this.httpClient.get(`${this.url}/${endpoint}/`, { params: params, headers: headers });
     }
     else {
+      // pass the httpOptions to the get request to send the token
       return this.httpClient
-        .get(`${this.url}/${endpoint}/`)
+        .get(`${this.url}/${endpoint}/`, this.httpOptions)
     }
+
+
+    //   return this.httpClient
+    //     .get(`${this.url}/${endpoint}/`)
+    // }
   }
 
   GetSingle(endpoint: string): Observable<any> {

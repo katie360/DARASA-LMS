@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,9 +23,18 @@ export class DashboardComponent implements OnInit {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private apiService: ApiService) {}
 
   ngOnInit() {}
+
+  logout() {
+    this.apiService.Post('auth/logout/', null).subscribe((res: any) => {
+      console.log(res);
+      localStorage.removeItem('user');
+      localStorage.removeItem('token');
+      window.location.href = '/';
+    });
+  }
 
 }
 
