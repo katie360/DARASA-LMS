@@ -48,6 +48,7 @@ a {
 
 .header .main_menu li .sub_menu {
     position: absolute;
+    left: 0;
     background-color: black;
     visibility: hidden;
     opacity: 0;
@@ -61,9 +62,7 @@ a {
 }
 
 .sub_menu {
-    max-width: 400px;
-    padding: 15px;
-    padding-left: 0;
+    max-width: 100%;
 }
 
 .main_menu li:hover>a {

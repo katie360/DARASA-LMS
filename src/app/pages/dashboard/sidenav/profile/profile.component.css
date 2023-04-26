@@ -1,19 +1,12 @@
-.container {
-    background: linear-gradient(to right, #d58001 0%, #ffa600 100%);
-    padding: 30px;
-}
-
-.flex-lg-nowrap {
-    padding: 30px;
-}
-
 .btn {
     background-color: #d58001;
     border: none;
 }
 
-.final {
-    margin-right: 5px;
+.container {
+    background-color: #d58001;
+    margin: 0;
+    max-width: 100%;
 }
 
 label {
@@ -22,4 +15,25 @@ label {
 
 .nav li a {
     font-weight: bold;
+}
+
+.tab-content div {
+    padding: 2%;
+}
+
+.tab-content {
+    margin-right: 0;
+}
+
+.form {
+    width: 100%;
+}
+
+.final {
+    margin-top: 20px;
+    margin-right: 13%;
+}
+
+.col-sm-6 {
+    width: 100%;
 }

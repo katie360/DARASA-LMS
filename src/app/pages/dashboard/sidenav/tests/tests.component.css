@@ -1,0 +1,27 @@
+thead tr {
+    background-color: var(--main-color);
+    height: 70px;
+    font-size: 18px;
+    text-align: center;
+}
+
+thead {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+tbody tr {
+    background-color: var(--primary-color);
+    height: 70px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.center-text h5 {
+    color: black;
+    font-size: 28px;
+    padding-top: 5%;
+}

@@ -16,6 +16,7 @@ import { ProgressComponent } from './pages/dashboard/sidenav/progress/progress.c
 import { CourseManagementComponent } from './pages/dashboard/sidenav/course-management/course-management.component';
 import { SettingsComponent } from './pages/dashboard/sidenav/settings/settings.component';
 import { AuthGuardService } from './services/auth-guard/auth-guard.service';
+import { TestsComponent } from './pages/dashboard/sidenav/tests/tests.component';
 
 const routes: Routes = [
   {
@@ -33,14 +34,11 @@ const routes: Routes = [
     component: DashboardComponent,
     canActivate: [AuthGuardService],
     children: [
-      { path: 'home', component: HomeComponent },
       { path: 'profile', component: ProfileComponent },
-      { path: 'progress', component: ProgressComponent },
-      { path: 'course-management', component: CourseManagementComponent },
-      { path: 'settings', component: SettingsComponent },
+      { path: 'tests', component: TestsComponent },
       {path:'courses',component:MyCoursesComponent},
-      {path:'resources',component:ResourcesComponent}
-      // { path: '', redirectTo: 'profile', pathMatch: 'full' }
+      {path:'resources',component:ResourcesComponent},
+      { path: '', redirectTo: 'profile', pathMatch: 'full' }
     ]
   },
   {path:'login',component:LoginComponent},

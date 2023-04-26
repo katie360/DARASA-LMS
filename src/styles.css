@@ -34,14 +34,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 70%;
     z-index: -1!important;
 }
 
 video {
     object-fit: cover;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 }
 
 #video-background:before {
@@ -50,7 +50,7 @@ video {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     background-color: rgba(0, 0, 0, 0.7)!important;
 }
 
@@ -70,45 +70,18 @@ video {
 
 .home-text h6 {
     color: var(--main-color);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    letter-spacing: 2px;
+    font-family: sans-serif;
+    padding-bottom: 20px;
 }
 
 .home-text p {
     color: #fff;
-    font-size: var(--p-font);
+    font-size: 22px;
     font-weight: 500;
+    padding-top: 20px;
     margin-bottom: 48px;
-}
-
-.latter form {
-    width: 100%;
-    max-width: 460px;
-    position: relative;
-}
-
-.latter form input:first-child {
-    display: inline-block;
-    width: 100%;
-    outline: none;
-    padding: 16px 140px 16px 15px;
-    border: 2px solid rgb(228, 165, 4);
-    border-radius: 30px;
-}
-
-.latter form input:last-child {
-    position: absolute;
-    display: inline-block;
-    border: none;
-    outline: none;
-    background: var(--main-color);
-    color: var(--bg-color);
-    padding: 16px 40px;
-    border-radius: 30px;
-    cursor: pointer;
-    top: 2px;
-    right: 1px;
 }
 
 .home-img img {
