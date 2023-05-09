@@ -8,6 +8,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class ResourcesComponent {
   courses: any;
+  enrolledCourses: any[] = [];
 
   constructor(private apiService: ApiService) { }
 
@@ -16,4 +17,15 @@ export class ResourcesComponent {
       this.courses = res;
     });
   }
+
+  enroll(course: any) {
+    this.apiService.Post('enroll', course).subscribe((res: any) => {
+      console.log(res);
+     
+      this.enrolledCourses.push(course);
+    }, (error: any) => {
+      console.log(error);
+    });
+  }
+  
 }

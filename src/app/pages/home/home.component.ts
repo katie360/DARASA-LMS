@@ -7,7 +7,7 @@ import { ApiService } from 'src/app/services/api/api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  coursesToShow = 3;
   categories: any;
   courses: any;
 

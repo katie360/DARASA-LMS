@@ -11,7 +11,7 @@
         <div class="home-text intro">
             <h6>Best online learning platform</h6>
             <h1>Accessible Online Courses For All</h1>
-            <p>Take your web development skills to the next level.</p>
+            <p>Take your Programming skills to the next level.</p>
 
         </div>
 
@@ -62,7 +62,7 @@
         </div>
 
         <div class="main-btn">
-            <a href="#" class="btn">All Categories</a>
+            <a href="sign-up" class="btn">Get started</a>
         </div>
     </div>
 </div>
@@ -75,26 +75,27 @@
         <h2>Explore The Popular Courses</h2>
     </div>
     <div class="container">
-
         <div class="row event_box">
-            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" *ngFor="let course of courses">
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" *ngFor="let course of courses.slice(0, 3)">
                 <div class="events_item">
                     <div class="thumb">
                         <a href="#"><img src="{{ course.image }}" alt=""></a>
-
                         <span class="price">
-                            <h6><em>$</em>{{ course.price }}</h6>
-                        </span>
+                <h6><em>$</em>{{ course.price }}</h6>
+              </span>
                     </div>
                     <div class="down-content">
                         <h4>{{ course.name }}</h4>
+                        <!-- <h5>{{ category.name }}</h5> -->
+                        <button class="button"> Enroll  Now </button>
                     </div>
                 </div>
             </div>
-            <div class="main-btn">
-                <a href="#" class="btn">View All Courses</a>
-            </div>
         </div>
+
+    </div>
+    <div class="main-btn">
+        <a href="#" class="btn">View All Courses</a>
     </div>
 </div>
 

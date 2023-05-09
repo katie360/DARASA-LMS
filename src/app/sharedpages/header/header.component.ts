@@ -10,23 +10,23 @@ export class HeaderComponent {
   showingPopup = false;
   categories: any;
 
-  showPopup() {
-    this.showingPopup = true;
-  }
+  // showPopup() {
+  //   this.showingPopup = true;
+  // }
 
-  hidePopup() {
-    this.showingPopup = false;
-  }
+  // hidePopup() {
+  //   this.showingPopup = false;
+  // }
 
-  flashPopup = false;
+  // flashPopup = false;
 
-  Popup() {
-    this.flashPopup = true;
-  }
+  // Popup() {
+  //   this.flashPopup = true;
+  // }
 
-  noPopup() {
-    this.flashPopup = false;
-  }
+  // noPopup() {
+  //   this.flashPopup = false;
+  // }
 
   constructor(private apiService: ApiService) { }
 

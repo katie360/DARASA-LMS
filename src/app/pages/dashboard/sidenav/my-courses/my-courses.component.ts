@@ -7,12 +7,13 @@ import { ApiService } from 'src/app/services/api/api.service';
   styleUrls: ['./my-courses.component.css']
 })
 export class MyCoursesComponent {
-  courses: any;
+  enrolledCourses: any[] = [];
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.Get('course-category/frontend').subscribe((res: any) => {
-      this.courses = res;
+    this.apiService.Get('enrolled-courses').subscribe((res: any) => {
+      this.enrolledCourses = res;
     });
   }
 }

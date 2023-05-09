@@ -435,6 +435,7 @@ header.sticky {
 
 .events_item .down-content {
     padding: 20px 30px 25px 30px;
+    display: visible;
 }
 
 .events_item .down-content span.author {
@@ -456,6 +457,26 @@ header.sticky {
 
 .events_item:hover .thumb span.price {
     transform: scale(1.2);
+}
+
+.button {
+    border: none!important;
+    background-color: var(--main-color);
+    padding: 15px 23px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 1em;
+    color: rgb(73, 57, 5);
+}
+
+.down-content h4 {
+    color: rgb(73, 57, 57);
+    z-index: 1;
 }
 
 

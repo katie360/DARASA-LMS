@@ -1,21 +1,20 @@
 <div class="courses " id="courses">
     <div class="center-text">
-        <h5> BROWSE ALL THE COURSES</h5>
-
+        <h5>BROWSE ALL THE COURSES</h5>
     </div>
     <div class="container">
-
         <div class="row event_box">
             <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design" *ngFor="let course of courses">
                 <div class="events_item">
                     <div class="thumb">
                         <a href="#"><img src="{{ course.image }}" alt=""></a>
-
-                        <span class="price"><h6><em>$</em>{{ course.price }}</h6></span>
+                        <span class="price">
+                <h6><em>$</em>{{ course.price }}</h6>
+              </span>
                     </div>
                     <div class="down-content">
-
                         <h4>{{ course.name }}</h4>
+                        <button class="button" (click)="enroll(course)">Enroll Now</button>
                     </div>
                 </div>
             </div>
