@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
 
@@ -28,8 +29,28 @@ export class ProfileComponent {
     }
   }
 
+  private getToken(): string | null {
+    return localStorage.getItem('token');
+  }
+
+  private getHttpOptions(): any {
+    const token = this.getToken();
+    if (token !== null) {
+      return {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Authorization': `Token ${token}`
+        })
+      };
+    } else {
+      return { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    }
+  }
+
+  private httpOptions = this.getHttpOptions();
+
   logout() {
-    this.apiService.Post('auth/logout/', null).subscribe((res: any) => {
+    this.apiService.Post('auth/logout/', { headers: this.httpOptions.headers }).subscribe((res: any) => {
       console.log(res);
       localStorage.removeItem('user');
       localStorage.removeItem('token');
