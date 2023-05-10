@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Course Details</h2>
+<mat-dialog-content>
+    <p><strong>Course Name:</strong> {{ data.name }}</p>
+    <p><strong>Course Description:</strong> {{ data.description }}</p>
+    <p><strong>Course Category:</strong> {{ data.category_name }}</p>
+    <p><strong>Course Duration:</strong> {{ data.duration }}</p>
+    <p><strong>Course Price:</strong> {{ data.price }}</p>
+
+    <button mat-button (click)="enroll(data)">Enroll</button>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+
