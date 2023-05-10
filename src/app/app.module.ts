@@ -42,6 +42,7 @@ import { EnrollCourseComponent } from './pages/dashboard/sidenav/enroll-course/e
 import { MatDialogModule } from '@angular/material/dialog';
 import { CheckoutComponent } from './pages/dashboard/sidenav/checkout/checkout.component';
 import { PaypalCheckoutComponent } from './pages/dashboard/sidenav/paypal-checkout/paypal-checkout.component';
+import { AssignmentDetailsComponent } from './pages/dashboard/sidenav/assignment-details/assignment-details.component';
 
 
 
@@ -74,6 +75,7 @@ import { PaypalCheckoutComponent } from './pages/dashboard/sidenav/paypal-checko
     EnrollCourseComponent,
     CheckoutComponent,
     PaypalCheckoutComponent,
+    AssignmentDetailsComponent
     
    
   ],

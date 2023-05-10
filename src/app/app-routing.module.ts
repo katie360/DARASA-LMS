@@ -19,6 +19,7 @@ import { AuthGuardService } from './services/auth-guard/auth-guard.service';
 import { TestsComponent } from './pages/dashboard/sidenav/tests/tests.component';
 import { EnrollCourseComponent } from './pages/dashboard/sidenav/enroll-course/enroll-course.component';
 import { CheckoutComponent } from './pages/dashboard/sidenav/checkout/checkout.component';
+import { AssignmentDetailsComponent } from './pages/dashboard/sidenav/assignment-details/assignment-details.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
     children: [
       { path: 'profile', component: ProfileComponent },
       { path: 'tests', component: TestsComponent },
+      { path: 'assignment/:id', component: AssignmentDetailsComponent },
       { path:'courses',component:MyCoursesComponent},
       { path:'resources',component:ResourcesComponent},
       { path: 'enroll/:id', component: EnrollCourseComponent},

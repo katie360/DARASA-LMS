@@ -15,7 +15,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let assignment of assignments">
-                    <td>{{ assignment.name }}</td>
+                    <td><a  (click)="assignmentDetail(assignment)">{{ assignment.name }}</a></td>
                     <td>In progress</td>
                     <td>{{ assignment.date_created | date:'medium' }}</td>
                     <td>{{ assignment.date_due | date:'medium' }}</td>

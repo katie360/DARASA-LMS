@@ -1,1 +1,20 @@
-<p>assignment-details works!</p>
+<div class="courses">
+    <div class="center-text">
+        <h5>ASSIGNMENTS Details</h5>
+    </div>
+    <div class="container">
+        <p><strong>Name:</strong> {{ assignment.name }}</p>
+        <p><strong>Instructions:</strong> {{ assignment.instructions}}</p>
+        <p *ngIf="assignment.file"><strong>File:</strong> <button (click)="downloadFile(assignment.file)">Download
+            </button> </p>
+        <p><strong>Due date:</strong> {{ assignment.date_due | date:'medium' }}</p>
+        <p><strong>Total Score:</strong> {{ assignment.total_score }}</p>
+
+        <!-- input file and submit button -->
+        <div>
+            <input type="file" #fileInput (change)="handleFileInput(fileInput)">
+            <button (click)="uploadFile()">Upload</button>
+
+        </div>
+    </div>
+</div>

@@ -27,4 +27,12 @@ export class TestsComponent {
 
   }
 
+  assignmentDetail(assignment: any) {
+    const id = assignment.id;
+    // Navigate to assignment detail page
+   
+    window.location.href = '/dashboard/assignment/'+id;
+
+  }
+
 }

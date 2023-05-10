@@ -60,6 +60,16 @@ export class ApiService {
     return this.httpClient.post(`${this.url}/${endpoint}`, entity, { headers: this.httpOptions.headers });
   }
 
+  PostFormData(endpoint: string, formData: FormData) {
+    const headers = new HttpHeaders();
+    // No need to set the Content-Type header, it will be automatically set by HttpClient
+
+    return this.httpClient.post(`${this.url}/${endpoint}`, formData, {
+      headers,
+      responseType: 'text' // Set the response type to 'text'
+    });
+  }
+
   Put(endpoint: string, entity: any) {
     return this.httpClient.put(`${this.url}/${endpoint}`, entity, { headers: this.httpOptions.headers });
   }
