@@ -16,4 +16,9 @@ export class MyCoursesComponent {
       this.enrolledCourses = res;
     });
   }
+
+  courseDetails(course: any): void {
+    const courseId = course.id;
+    window.location.href = '/dashboard/course/' + courseId;
+  }
 }

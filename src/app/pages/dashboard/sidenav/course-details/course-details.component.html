@@ -1,1 +1,16 @@
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam harum explicabo iste non vitae soluta quidem voluptate, sed qui, cumque cum, odit natus perferendis impedit? Consequatur incidunt architecto autem placeat.
+<div class="courses">
+    <div class="center-text">
+        <h5>COurse Details</h5>
+    </div>
+    <div class="container">
+        <p><strong>Name:</strong> {{ course.name }}</p>
+        <p><strong>Course:</strong> {{ course.course }}</p>
+        <p><strong>Chapter:</strong> Chapter {{ course.chapter}}</p>
+        <p *ngIf="course.file"><strong>File:</strong> <button (click)="downloadFile(course.file)">Download
+            </button> </p>
+        <p *ngIf="course.video"><strong>File:</strong> <button>{{ course.video }} Emded Youtube here
+            </button> </p>
+        <p><strong>Content:</strong> {{ course.content }}</p>
+
+    </div>
+</div>

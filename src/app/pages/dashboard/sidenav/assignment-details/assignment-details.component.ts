@@ -26,7 +26,7 @@ export class AssignmentDetailsComponent {
   downloadFile(url: string): void {
     const link = document.createElement('a');
     link.href = url;
-    link.download = this.assignment.name; // Set the desired filename here
+    link.download = this.assignment.name; 
     link.target = '_blank'; // Open the file in a new tab/window
 
     document.body.appendChild(link);
@@ -46,32 +46,6 @@ export class AssignmentDetailsComponent {
     }
   }
 
-
-
-  // uploadFile(): void {
-  //   // Get file from input with id 'file'
-  //   const fileInput = document.getElementById('file') as HTMLInputElement;
-  //   const file = fileInput?.files?.[0];
-
-  //   if (!file) {
-  //     // File not selected, handle the error or show a message
-  //     return;
-  //   }
-
-  //   const formData = new FormData();
-  //   formData.append('file', file);
-  //   formData.append('assignment', this.assignmentId);
-
-  //   this.apiService.Post('student/submit-assignment/', formData).subscribe(
-  //     (res: any) => {
-  //       alert(res.message);
-  //     },
-  //     (error: any) => {
-  //       // Handle the error
-  //       console.error(error);
-  //     }
-  //   );
-  // }
 
   uploadFile(): void {
     // Check if a file is selected
