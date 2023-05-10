@@ -1,0 +1,37 @@
+<div class="courses">
+    <div class="center-text">
+        <h5>CHECKOUT COURSES </h5>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Course Category</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let course of courses">
+                    <td>{{ course.name }}</td>
+                    <td>{{ course.category_name}}</td>
+                    <td>{{ course.duration }}</td>
+                    <td>{{ course.price }}</td>
+                    <td><button class="button" (click)="removeCourse(course)">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 align-self-center mb-30 event_outer col-md-6 design mx-auto">
+            <div class="events_item">
+                <div class="down-content">
+                    <h4>Total Price: USD. {{ total_price }} </h4>
+                    <button class="button text-center" (click)="checkout(total_price)">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
