@@ -25,3 +25,8 @@ tbody tr {
     font-size: 28px;
     padding-top: 5%;
 }
+
+td a {
+    color: var(--main-color);
+    font-weight: bold;
+}

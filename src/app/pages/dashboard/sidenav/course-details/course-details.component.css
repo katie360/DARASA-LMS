@@ -1,0 +1,8 @@
+.center-text h2 {
+    margin-top: 1em;
+    color: var(--main-color);
+}
+
+p strong {
+    font-size: 22px;
+}
