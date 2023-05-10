@@ -38,6 +38,10 @@ import { TestsComponent } from './pages/dashboard/sidenav/tests/tests.component'
 import { AssistComponent } from './pages/dashboard/sidenav/assist/assist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EnrollCourseComponent } from './pages/dashboard/sidenav/enroll-course/enroll-course.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CheckoutComponent } from './pages/dashboard/sidenav/checkout/checkout.component';
+import { PaypalCheckoutComponent } from './pages/dashboard/sidenav/paypal-checkout/paypal-checkout.component';
 
 
 
@@ -67,6 +71,9 @@ import { FormsModule } from '@angular/forms';
     ResourcesComponent,
     TestsComponent,
     AssistComponent,
+    EnrollCourseComponent,
+    CheckoutComponent,
+    PaypalCheckoutComponent,
     
    
   ],
@@ -86,7 +93,8 @@ import { FormsModule } from '@angular/forms';
     // MatMomentDateModule,
     MatExpansionModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

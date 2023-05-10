@@ -17,6 +17,8 @@ import { CourseManagementComponent } from './pages/dashboard/sidenav/course-mana
 import { SettingsComponent } from './pages/dashboard/sidenav/settings/settings.component';
 import { AuthGuardService } from './services/auth-guard/auth-guard.service';
 import { TestsComponent } from './pages/dashboard/sidenav/tests/tests.component';
+import { EnrollCourseComponent } from './pages/dashboard/sidenav/enroll-course/enroll-course.component';
+import { CheckoutComponent } from './pages/dashboard/sidenav/checkout/checkout.component';
 
 const routes: Routes = [
   {
@@ -36,8 +38,10 @@ const routes: Routes = [
     children: [
       { path: 'profile', component: ProfileComponent },
       { path: 'tests', component: TestsComponent },
-      {path:'courses',component:MyCoursesComponent},
-      {path:'resources',component:ResourcesComponent},
+      { path:'courses',component:MyCoursesComponent},
+      { path:'resources',component:ResourcesComponent},
+      { path: 'enroll/:id', component: EnrollCourseComponent},
+      { path: 'checkout', component: CheckoutComponent },
       { path: '', redirectTo: 'profile', pathMatch: 'full' }
     ]
   },

@@ -14,12 +14,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Introduction to programming</td>
+                <tr *ngFor="let assignment of assignments">
+                    <td>{{ assignment.name }}</td>
                     <td>In progress</td>
-                    <td>Jun 21</td>
-                    <td>June 28</td>
-                    <td>70%</td>
+                    <td>{{ assignment.date_created | date:'medium' }}</td>
+                    <td>{{ assignment.date_due | date:'medium' }}</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>

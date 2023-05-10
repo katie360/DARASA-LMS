@@ -11,25 +11,25 @@
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="image">
-                                <img src="{{ course.image }}" alt="">
+                                <img src="{{ course.course.image }}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-9">
                             <ul>
                                 <li>
-                                    <span class="category">{{ course.category_name }}</span>
-                                    <h4>{{ course.name }}</h4>
+                                    <span class="category">{{ course.course.category_name }}</span>
+                                    <h4>{{ course.course.name }}</h4>
                                 </li>
                                 <li>
-                                    <span>{{ course.description }}</span>
+                                    <span>{{ course.course.description }}</span>
                                 </li>
                                 <li>
                                     <span>Duration:</span>
-                                    <h6>{{ course.duration }}</h6>
+                                    <h6>{{ course.course.duration }}</h6>
                                 </li>
                                 <li>
                                     <span>Price:</span>
-                                    <h6>${{ course.price }}</h6>
+                                    <h6>${{ course.course.price }}</h6>
                                 </li>
                             </ul>
                             <a href="#"><i class="fa fa-angle-right"></i></a>

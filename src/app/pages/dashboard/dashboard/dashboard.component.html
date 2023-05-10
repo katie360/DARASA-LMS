@@ -1,9 +1,10 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false" #sidenav mode="side">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false" #sidenav mode="side">
         <mat-toolbar class="toolbar">
             <button mat-icon-button (click)="sidenav.toggle()">
                 <mat-icon>menu</mat-icon>
-              </button>
+            </button>
             <a href="">Darasa </a> </mat-toolbar>
         <mat-nav-list class="items">
             <a class="mat-list-item" routerLinkActive="active" routerLink="profile">
@@ -15,6 +16,13 @@
 
             <a class="mat-list-item" routerLink="tests" routerLinkActive="active">
                 <mat-icon>quiz</mat-icon>Assignnments</a>
+
+            <a class="mat-list-item" routerLink="checkout" routerLinkActive="active">
+                <mat-icon>shopping_basket</mat-icon>Checkout
+                <span *ngIf="coursesCount > 0 " class="counter-icon">{{ coursesCount }}</span>
+            </a>
+
+           
 
 
             <!-- <mat-expansion-panel class="panel">

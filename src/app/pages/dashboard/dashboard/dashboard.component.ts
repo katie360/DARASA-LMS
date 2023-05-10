@@ -4,6 +4,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
 import { ApiService } from 'src/app/services/api/api.service';
+import { CoursesService } from './courses.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,6 +12,7 @@ import { ApiService } from 'src/app/services/api/api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  coursesCount = 0;
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
@@ -23,9 +25,12 @@ export class DashboardComponent implements OnInit {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, private apiService: ApiService) {}
+  constructor(private breakpointObserver: BreakpointObserver, private apiService: ApiService, private coursesService: CoursesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+   
+    this.subscribeToCourseChanges();
+  }
 
   logout() {
     this.apiService.Post('auth/logout/', null).subscribe((res: any) => {
@@ -33,6 +38,17 @@ export class DashboardComponent implements OnInit {
       localStorage.removeItem('user');
       localStorage.removeItem('token');
       window.location.href = '/';
+    });
+  }
+
+  // updateCoursesCount(): void {
+  //   const courses = this.coursesService.getCourses();
+  //   this.coursesCount = courses ? courses.length : 0;
+  // }
+
+  subscribeToCourseChanges(): void {
+    this.coursesService.getCourses().subscribe(courses => {
+      this.coursesCount = courses ? courses.length : 0;
     });
   }
 

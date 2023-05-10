@@ -12,7 +12,7 @@ export class MyCoursesComponent {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.Get('enrolled-courses').subscribe((res: any) => {
+    this.apiService.Get('student/my-courses').subscribe((res: any) => {
       this.enrolledCourses = res;
     });
   }
