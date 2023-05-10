@@ -25,3 +25,7 @@ tbody tr {
     font-size: 28px;
     padding-top: 5%;
 }
+
+.courses{
+    overflow-x: hidden;
+}
