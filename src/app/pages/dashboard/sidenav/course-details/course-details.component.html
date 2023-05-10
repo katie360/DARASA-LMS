@@ -2,15 +2,23 @@
     <div class="center-text">
         <h2>COURSE DETAILS</h2>
     </div>
+<div *ngFor="let course of getCurrentCourses(); let i = index">
     <div class="container">
         <p><strong>Name:</strong> {{ course.name }}</p>
         <p><strong>Course:</strong> {{ course.course }}</p>
-        <p><strong>Chapter:</strong> Chapter {{ course.chapter}}</p>
-        <p *ngIf="course.file"><strong>File:</strong> <button (click)="downloadFile(course.file)">Download
-            </button> </p>
-        <p *ngIf="course.video"><strong>File:</strong> <button>{{ course.video }} Emded Youtube here
-            </button> </p>
-        <p><strong>Content:</strong> {{ course.content }}</p>
-
+        <p><strong>Chapter:</strong> Chapter {{ course.chapter }}</p>
+        <p *ngIf="course.file"><strong>File:</strong> <button>Download</button></p>
+        <p *ngIf="course.video"><strong>File:</strong> <button>{{ course.video }} Embed YouTube here</button></p>
+        <p><strong>Content:</strong> <span [innerHTML]="course.content"></span></p>
     </div>
+</div>
+
+<div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Previous Chapter</button>
+    
+    <button (click)="nextPage()" [disabled]="currentPage === getTotalPages()">Next Chapter</button>
+</div>
+
+
+
 </div>

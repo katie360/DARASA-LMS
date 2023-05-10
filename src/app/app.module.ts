@@ -43,6 +43,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CheckoutComponent } from './pages/dashboard/sidenav/checkout/checkout.component';
 import { PaypalCheckoutComponent } from './pages/dashboard/sidenav/paypal-checkout/paypal-checkout.component';
 import { AssignmentDetailsComponent } from './pages/dashboard/sidenav/assignment-details/assignment-details.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { CourseDetailsComponent } from './pages/dashboard/sidenav/course-details/course-details.component';
+
 
 
 
@@ -75,7 +78,8 @@ import { AssignmentDetailsComponent } from './pages/dashboard/sidenav/assignment
     EnrollCourseComponent,
     CheckoutComponent,
     PaypalCheckoutComponent,
-    AssignmentDetailsComponent
+    AssignmentDetailsComponent,
+    CourseDetailsComponent
     
    
   ],
@@ -96,7 +100,8 @@ import { AssignmentDetailsComponent } from './pages/dashboard/sidenav/assignment
     MatExpansionModule,
     HttpClientModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

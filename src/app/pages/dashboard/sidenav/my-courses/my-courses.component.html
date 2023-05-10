@@ -36,6 +36,12 @@
 
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>Progress: {{ course.progress }}%</p>
+                            <mat-progress-bar mode="determinate" [value]="course.progress"></mat-progress-bar>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
